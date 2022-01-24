@@ -12,7 +12,6 @@ public class greedy_boj_15729_JJC {
 				button[i] = true; 
 			}
 		}
-		
 		int result = 0;
 		for (int i = 0; i < n; i++) { 			// 조회는 n전까지만
 			if (button[i] == true) {			// 배열의 값이 왼쪽부터 true(1)이라면 우측 두개까지 상태변경
