@@ -30,6 +30,7 @@ class BOJ_1263{
         //기준점을 잡아주기 위해 포문 밖에 걍 초기화함.
         int time = arr[Task-1].deadline-arr[Task-1].needed_time;
         //자세한 부분은 스터디 때 설명해야 할 듯.
+        //스케쥴을 한 개, 두 개, 세 개 늘려가며 생각해보면 쉬움.
         for(int i = Task -2 ; i >= 0 ; i--)
         {
             if(arr[i].deadline < time)
