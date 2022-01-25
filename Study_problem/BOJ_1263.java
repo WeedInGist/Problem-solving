@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
+//커밋 메시지 추가용
 //쉽게 정렬을 해주기 위해 스케쥴 클래스를 만든 뒤 Comparable 인터페이스를 확장함.
 class Schedule implements Comparable<Schedule>
 {
