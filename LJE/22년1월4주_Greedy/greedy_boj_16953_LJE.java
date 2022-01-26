@@ -2,7 +2,7 @@ package greedy;
 
 import java.util.Scanner;
 
-public class BJ_16953 {
+public class greedy_boj_16953_LJE {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
