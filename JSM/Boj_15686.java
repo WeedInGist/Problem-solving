@@ -75,6 +75,7 @@ public class Boj_15686 {
             //     }
             //     System.out.println();
             // }
+            
             //치킨거리의 합을 갱신해주기 위해 만든 임시 치킨거리합 변수
             int temp = 0;
             for(int i = 1; i <= size; i++)
