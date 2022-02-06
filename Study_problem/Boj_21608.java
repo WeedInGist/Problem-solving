@@ -274,3 +274,5 @@ public class Boj_21608 {
         System.out.println(count_sum);
     }
 }
+//마지막으로 더 생각해볼 점.
+//ArrayList를 좀 더 잘 써보자. 더 나아가서 자바에서 제공해주는 자료구조, 스택, 큐, 우선순위 큐, 동적배열(ArrayList 또는 vector) 등을 잘 활용해보자.
