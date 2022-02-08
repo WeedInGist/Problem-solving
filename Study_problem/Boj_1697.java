@@ -68,7 +68,7 @@ public class Boj_1697 {
             Queue<Generation> queue = new LinkedList<Generation>();
             //방문한 곳을 체크해준다.
             visited[x] = true;
-            //이 코드는 처음 탐색 X에서만 쓰이는 코드이고 따라서 당연히 세대는 0세대이다. 
+            //70번째부터 74번째 줄은 처음 탐색 X에서만 쓰이는 코드이고 따라서 당연히 세대는 0세대이다. 
             int generation = 0;
             // 맨 처음 탐색으로 보는 지점 X를 0세대라고 표시해놓으며 큐에 넣는다.
             queue.add(new Generation(x, generation));
@@ -105,7 +105,7 @@ public class Boj_1697 {
                                 //이 때 중요한 점은 현재 g 세대인 지점에서 탐색했으므로
                                 // g 세대에서 탐색할 수 있는 세대는 g+1 세대라는 점이다.
                                 // 따라서 큐에 넣어줄 때 세대를 location.g+1로 정해주었다.
-                                // 1세대에서 탐색해서 갈 수 있는 지점은 2세대이기 때문인 것처럼.
+                                // 1세대에서 탐색해서 갈 수 있는 지점은 2세대이기 때문인 것처럼 한 세대를 더해주어야 한다.
                                 queue.add(new Generation(next_x[i], location.g+1));
                             }
                         }
