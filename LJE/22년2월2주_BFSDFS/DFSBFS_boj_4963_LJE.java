@@ -50,5 +50,4 @@ public class DFSBFS_boj_4963_LJE {
 			System.out.println(island);
 		}
 	}
-
 }
