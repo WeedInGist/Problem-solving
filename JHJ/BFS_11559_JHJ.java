@@ -39,7 +39,7 @@ public class BFS_11559_JHJ {
 		// == 입력 받기 완료 ==
 
 		int chainCnt = 0; // 연쇄횟수
-		while (true) { // 뿌요들이 다 사라질때까지 반복
+		while (true) { // 뿌요들이 사라질 수 있을 
 			visited = new boolean[Row][Col];
 			boolean isValid = false;
 			for (int j = Col - 1; j >= 0; j--) {
@@ -128,4 +128,3 @@ public class BFS_11559_JHJ {
 		}
 	}
 }
- 
