@@ -1,3 +1,4 @@
+
 //package study05_dfs_bfs;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -5,17 +6,20 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-/**
+/*
  * 22.02.18 금요일
- * @category BFS - 백준 2573 빙산
  * 
- *           바다: 0 빙산: 1 <= N 1년마다 동서남북 붙어있는 0만큼 높이가 줄어든다. - 상하좌우 바다 살피기
+ * BFS - 백준 2573 빙산
  * 
- *           빙산이 "두 덩어리" 이상으로 분리되는 "최초" 시간 - bfs가 두 번이상 일어날 경우 탐색 끝 빙산의 첫번 째 행과
- *           열, 마지막 행과 열은 항상 0으로 시작 - 1부터 시작
+ *           바다: 0 / 빙산: 1 <= N 1년마다 동서남북 붙어있는 0만큼 높이가 줄어든다. - 상하좌우 바다 살피기
  * 
- *           빙하의 시작점 찾는 함수 melting 빙산 탐색 bfs - 위치 Point class 빙하가 전부 다 녹았는지 판단하는
- *           checkIce
+ *           빙산이 "두 덩어리" 이상으로 분리되는 "최초"의 년 - 
+ *           bfs가 두 번이상 일어날 경우 탐색 끝 빙산의 첫번 째 행과 열, 마지막 행과 열은 항상 0으로 시작  
+ *           1부터 탐색 시작 (0,0), (N-1, M-1)은 항상 바다이기 때문에
+ * 
+ *           빙하의 시작점 찾는 함수 melting 
+ *           빙산 탐색 bfs - 위치 Point class 
+ *           빙하가 전부 다 녹았는지 판단하는 checkIce
  *
  */
 
@@ -53,23 +57,23 @@ public class BFS_boj_2573_JHJ {
 		while (true) {
 			visited = new boolean[N][M];
 			int cnt = 0; // 몇 덩어리로 나누어졌는지 개수 세기
-			for (int r = 1; r < N-1; r++) {
-				for (int c = 1; c < M-1; c++) {
+			for (int r = 1; r < N - 1; r++) {
+				for (int c = 1; c < M - 1; c++) {
 
-					if (visited[r][c] || map[r][c] == 0) // 이미 방문한 곳이거나 바다면 패스 
+					if (visited[r][c] || map[r][c] == 0) // 이미 방문한 곳이거나 바다면 패스
 						continue;
 
 					cnt++; // 얼음을 녹이러 가기 전, 몇 덩어리의 얼음인지를 카운트 한다.
 					if (cnt > 1) // 얼음이 두 덩어리 이상이 되었다면 탐색 끝
 						return year; // 두 덩어리가 있는 상태면 얼음이 두 덩어리로 분리되는데 걸리는 년도 반환
-					
-					bfs(map, r, c); // 연결된 얼음을 녹인다. 
+
+					bfs(map, r, c); // 연결된 얼음을 녹인다.
 					// 얼음이 다 녹은 모든 빙산이 녹았는지를 체크
 					if (!isIce(map)) // 두 덩어리로 분리되지 않은 채(한덩어리의) 빙산이 다 녹았거나, 처음부터 녹일 얼음이 없다면
 						return 0;
 				}
 			}
-			year++; // 한 덩어리의 얼음이 녹았다면 1년이 지난 것이다. 
+			year++; // 한 덩어리의 얼음이 녹았다면 1년이 지난 것이다.
 		}
 	}
 
@@ -110,8 +114,8 @@ public class BFS_boj_2573_JHJ {
 
 	// ** 더이상 녹일 얼음이 있는지 확인
 	private static boolean isIce(int map[][]) {
-		for (int r = 1; r < N-1; r++) { // 처음과 끝을 보지 않는다고 했으므로 굳이 0,0 좌표부터 탐색을 시작할 필요가 없다. - 탐색 시작시 시간 초과 발생
-			for (int c = 1; c < M-1; c++) {
+		for (int r = 1; r < N - 1; r++) { // 처음과 끝을 보지 않는다고 했으므로 굳이 0,0 좌표부터 탐색을 시작할 필요가 없다. - 탐색 시작시 시간 초과 발생
+			for (int c = 1; c < M - 1; c++) {
 				if (map[r][c] != 0)
 					return true;
 			}
