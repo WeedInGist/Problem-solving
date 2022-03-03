@@ -3,7 +3,32 @@ package DP;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+/*
+ * 1 = 1
+ * -------------------> 1
+ * 
+ * 2 = 2
+ *   = 1 + 1
+ * -------------------> 2
+ * 
+ * 3 = 3
+ *   = 2 + 1
+ *   = 1 + 2
+ *   = 1 + 1 + 1
+ * -------------------> 4
+ *   
+ * 4 = 3 + (1)->1
+ *   = 2 + (2)->2
+ *   = 1 + (3)->4
+ * -------------------> 7
+ * 
+ * 5 = 3 + (2)->2
+ *   = 2 + (3)->4
+ *   = 1 + (4)->7
+ * -------------------> 13
+ * 
+ * => a(n) = a(n-1) + a(n-2) + a(n-3)
+ */
 
 public class DP_BOJ_9095 {
 	static int[] d = new int[12];
