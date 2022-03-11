@@ -1,5 +1,5 @@
 // BOJ - 미로만들기(2665번)
-// BFS
+// BFS + Dijkstra
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
