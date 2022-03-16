@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.StringTokenizer;
 
 /*
- * 2021. 03. 14. 화  - 백준 1922번 - 네트워크 연결
+ * 2022. 03. 15. 화  - 백준 1922번 - 네트워크 연결
  * 
  */
 
