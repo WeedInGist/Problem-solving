@@ -53,6 +53,7 @@ public class MST_boj_14621_JHJ {
 	 * 
 	 * @param graph : 완성된 그래프
 	 * @param N     : 노드의 개수
+	 * @param genders : 성별 정보
 	 */
 	static int prim(LinkedList<LinkedList<Node>> graph, int N, int[] genders) {
 
